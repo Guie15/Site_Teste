@@ -1,8 +1,30 @@
+const date = new Date();
+function teste(){
+  let hora = date.getHours();
+  let cumprimento = document.querySelector('div#horaDia');
+  if (hora >= 0 && hora <= 12){
+    cumprimento.innerHTML ="Bom Dia!!";
+    document.body.style.backgroundColor = 'rgba(233, 214, 118, 0.99)';
+  }else if(hora >= 12 && hora <= 18 ){
+    cumprimento.innerHTML ="Boa Tarde!!"
+     document.body.style.backgroundColor = 'rgba(226, 155, 74, 0.81)' ;
+  }else{
+    cumprimento.innerHTML ="Boa Noite!!"
+     document.body.style.backgroundColor = 'rgba(0, 0, 0, 0.79)';
+  }
+  
+}
+
+
 function verificar(){
-  let data = new Date();
-  let ano = data.getFullYear();
+  
+  let ano = date.getFullYear();
   let fano = document.getElementById('txtano');
   let res = document.querySelector('div#res');
+ 
+  
+  
+  
   
   if(fano.value == 0 || fano.value > ano){
     alert('[ERRO] Ano De Nascimento não foi preenchida corretamente!');
@@ -56,8 +78,10 @@ function verificar(){
       
     }
     res.style.textAlign = "center";
-    res.innerHTML = `Voçê é,  ${genero} com ${idade} anos`;
+    res.innerHTML = `Você é,  ${genero} com ${idade} anos`;
     res.appendChild(img);
   }
   
 }
+
+teste();
