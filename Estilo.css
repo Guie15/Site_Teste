@@ -19,3 +19,6 @@ footer{
   text-align:center;
   font-style:italic;
 }
+div#horaDia{
+  color:rgba(149, 7, 201, 0.81);
+}
